@@ -74,16 +74,18 @@
 import json
 str_title = []
 with open("products.json", "r", encoding="utf-8") as file:
-    productds = json.load(file)
+    products = json.load(file)
 
-productds.sort(key=lambda x: x["title"])
-print(productds)
-#     for item in productds:
+products.sort(key=lambda x: x["price"])
+sorted_product = sorted(products, key=lambda product: product["price"], reverse=True)
+print(sorted_product)
+#     for item in products:
 #         str_title.append(item["title"])
 #         sort_str_title = sorted(str_title)
 #         sort_str_title = sort_str_title.pop(0)
 #         sort_str_title_desc = sorted(str_title, reverse=True)
 # print(sort_str_title)
 # print(sort_str_title_desc)
-with open()
+# with open("products.json", "w", encoding="utf-8") as file:
+#     json.dump(productds, file)
         
